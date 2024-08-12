@@ -2,13 +2,13 @@ import {RouteRecordRaw} from "vue-router";
 import UserLayout from "@/layouts/UserLayout.vue";
 import UserLoginView from "@/views/user/UserLoginView.vue";
 import UserRegisterView from "@/views/user/UserRegisterView.vue";
-import NoAuthView from "@/views/user/NoAuthView.vue";
 import ACCESS_ENUM from "@/access/accessEnum";
 import AddQuestionView from "@/views/question/AddQuestionView.vue";
 import ManageQuestionView from "@/views/question/ManageQuestionView.vue";
 import QuestionsView from "@/views/question/QuestionsView.vue";
 import QuestionSubmitView from "@/views/question/QuestionSubmitView.vue";
 import ViewQuestionView from "@/views/question/ViewQuestionView.vue";
+import NoAuthView from "/src/views/NoAuthView.vue";
 
 export const routes: Array<RouteRecordRaw> = [
     {
