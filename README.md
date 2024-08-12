@@ -1,36 +1,3 @@
-# starseaoj
+# 星海 OJ 在线判题系统 —— 前端
 
-## 根据后台生成代码
-
-```shell
-openapi --input http://localhost:8121/api/v2/api-docs --output ./generated --client axios
-```
-
-
-## Project setup
-
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-
-```
-yarn build
-```
-
-### Lints and fixes files
-
-```
-yarn lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
+本系统以后端开发为主，前端仅做基本功能实现，详见星海OJ在线判题系统：https://github.com/guiyi886/starseaoj_backend
