@@ -23,7 +23,7 @@
     </a-col>
     <a-col flex="100px">
       <div class="user-info">
-        <span>欢迎您，{{ store.state.user?.loginUser?.userName }}</span>
+        <span>欢迎您！{{ store.state.user?.loginUser?.userName }}</span>
         <a-button type="primary" @click="handleLogin">
           登录/切换
         </a-button>
