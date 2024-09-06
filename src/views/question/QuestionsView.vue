@@ -27,7 +27,7 @@
       <template #tags="{ record }">
         <a-space wrap>
           <a-tag v-for="(tag, index) of record.tags" :key="index" color="green"
-            >{{ tag }}
+          >{{ tag }}
           </a-tag>
         </a-space>
       </template>
@@ -54,11 +54,7 @@
 
 <script setup lang="ts">
 import { onMounted, ref, watchEffect } from "vue";
-import {
-  Question,
-  QuestionControllerService,
-  QuestionQueryRequest,
-} from "../../../generated";
+import { Question, QuestionControllerService, QuestionQueryRequest } from "../../../generated";
 import message from "@arco-design/web-vue/es/message";
 import { useRouter } from "vue-router";
 import moment from "moment";
@@ -71,7 +67,7 @@ const searchParams = ref<QuestionQueryRequest>({
   title: "",
   tags: [],
   pageSize: 8,
-  current: 1,
+  current: 1
 });
 
 const loadData = async () => {
@@ -105,33 +101,33 @@ onMounted(() => {
 const columns = [
   {
     title: "题号",
-    dataIndex: "id",
+    dataIndex: "id"
   },
   {
     title: "题目名称",
-    dataIndex: "title",
+    dataIndex: "title"
   },
   {
     title: "标签",
-    slotName: "tags",
-  },
+    slotName: "tags"
+  },/*
   {
     title: "通过率",
     slotName: "acceptedRate",
-  },
+  }, */
   {
     title: "创建时间",
-    slotName: "createTime",
+    slotName: "createTime"
   },
   {
-    slotName: "optional",
-  },
+    slotName: "optional"
+  }
 ];
 
 const onPageChange = (page: number) => {
   searchParams.value = {
     ...searchParams.value,
-    current: page,
+    current: page
   };
 };
 
@@ -143,7 +139,7 @@ const router = useRouter();
  */
 const toQuestionPage = (question: Question) => {
   router.push({
-    path: `/view/question/${question.id}`,
+    path: `/view/question/${question.id}`
   });
 };
 
@@ -154,7 +150,7 @@ const doSubmit = () => {
   // 这里需要重置搜索页号
   searchParams.value = {
     ...searchParams.value,
-    current: 1,
+    current: 1
   };
 };
 </script>
